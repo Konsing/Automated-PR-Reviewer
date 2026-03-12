@@ -1,0 +1,37 @@
+{
+  "name": "automated-pr-reviewer",
+  "version": "1.0.0",
+  "description": "A GitHub App that automatically reviews PRs using AI (Groq/Llama 3.3 70B)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "probot run ./dist/index.js",
+    "dev": "npm run build && probot run ./dist/index.js",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "github-app",
+    "code-review",
+    "ai",
+    "probot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "groq-sdk": "^1.1.1",
+    "js-yaml": "^4.1.1",
+    "minimatch": "^10.2.4",
+    "probot": "^14.2.4"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/minimatch": "^5.1.2",
+    "@types/node": "^25.5.0",
+    "smee-client": "^5.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}

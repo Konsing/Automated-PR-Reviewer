@@ -1,0 +1,12 @@
+# GitHub App manifest — https://docs.github.com/en/apps/sharing-github-apps
+name: AI PR Reviewer
+description: Automatically reviews pull requests using AI (Llama 3.3 70B via Groq)
+url: https://github.com/apps/ai-pr-reviewer
+
+default_events:
+  - pull_request
+
+default_permissions:
+  pull_requests: write
+  contents: read
+  issues: write
