@@ -4,6 +4,27 @@ A GitHub App that automatically reviews pull requests using AI.
 
 Built with [Probot](https://probot.github.io/) and powered by [Groq](https://groq.com/)'s Llama 3.3 70B model (free tier), it posts inline review comments directly on your PR diffs and auto-labels PRs by finding category.
 
+## See It in Action
+
+> **The bot reviews your PR, flags issues inline, and labels the PR automatically.**
+
+### PR Review Overview
+<img src="docs/screenshots/overview.png" alt="PR Overview" width="100%">
+
+---
+
+### Inline Review Detail
+*Each comment targets a specific line with a severity badge and actionable feedback.*
+
+<img src="docs/screenshots/PR1.png" alt="Inline Review Detail" width="700">
+
+---
+
+### Mobile Notifications
+*Get an email summary of all issues — review on the go.*
+
+<img src="docs/screenshots/mobile.png" alt="Mobile Email Notification" width="300">
+
 ## How It Works
 
 ```
@@ -142,14 +163,14 @@ If no `.pr-reviewer.yml` is found, the app uses the defaults above.
 
 The app automatically creates and applies labels to reviewed PRs:
 
-| Label                  | Color                                          | Meaning                                  |
-| ---------------------- | ---------------------------------------------- | ---------------------------------------- |
-| `ai:bug-found`         | ![#d73a4a](https://placehold.co/12x12/d73a4a/d73a4a) Red    | Potential bugs detected                  |
-| `ai:security-concern`  | ![#e36209](https://placehold.co/12x12/e36209/e36209) Orange | Security issues flagged                  |
-| `ai:performance`       | ![#fbca04](https://placehold.co/12x12/fbca04/fbca04) Yellow | Performance concerns found               |
-| `ai:suggestion`        | ![#0075ca](https://placehold.co/12x12/0075ca/0075ca) Blue   | General improvement suggestions          |
-| `ai:style`             | ![#c5c5c5](https://placehold.co/12x12/c5c5c5/c5c5c5) Gray  | Code style or formatting issues          |
-| `ai:clean-review`      | ![#0e8a16](https://placehold.co/12x12/0e8a16/0e8a16) Green  | No issues found — clean PR               |
+| Label | Meaning |
+| ----- | ------- |
+| `ai:bug-found` | Potential bugs detected |
+| `ai:security-concern` | Security issues flagged |
+| `ai:performance` | Performance concerns found |
+| `ai:suggestion` | General improvement suggestions |
+| `ai:style` | Code style or formatting issues |
+| `ai:clean-review` | No issues found — clean PR |
 
 Labels are created automatically on first use. A PR can have multiple labels if issues span categories.
 
